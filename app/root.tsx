@@ -8,9 +8,6 @@ import {
 } from "remix";
 import type { MetaFunction } from "remix";
 
-import { getCssText } from "./styles/stitches.config";
-import { globalStyles } from "./styles/global";
-
 export const meta: MetaFunction = () => {
   return {
     title: "react-spring",
@@ -26,11 +23,6 @@ function Document({ children }: { children: React.ReactNode }) {
         <meta charSet="utf-8" />
         <Meta />
         <Links />
-        <style
-          id="stitches"
-          suppressHydrationWarning
-          dangerouslySetInnerHTML={{ __html: getCssText() }}
-        />
       </head>
       <body>
         {children}

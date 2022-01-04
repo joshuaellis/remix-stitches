@@ -1,22 +1,15 @@
-import { createStitches } from '@stitches/react'
+import { createStitches } from "@stitches/react";
 
-const stitches = createStitches({
+export const { styled, getCssText, globalCss } = createStitches({
   theme: {
     colors: {
-      red: '#ff6d6d',
-      steel: '#363645',
-      black: '#202020',
-      white: '#fff',
-      grey: '#ccc',
+      red: "#ff6d6d",
+      steel: "#363645",
+      black: "#202020",
+      white: "#fff",
+      grey: "#ccc",
     },
   },
-  media: {
-    tabletUp: '(min-width: 768px)',
-    desktopUp: '(min-width: 1024px)',
-    largeDesktopUp: '(min-width: 1680px)',
-  },
-})
-
-const { styled, globalCss, getCssText } = stitches
-
-export { styled, getCssText, globalCss }
+  utils: {},
+  prefix: "",
+});
